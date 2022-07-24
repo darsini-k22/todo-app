@@ -1,0 +1,27 @@
+.task-form {
+  @apply grid grid-cols-3 gap-4 border-2 border-black rounded-xl p-3 max-w-4xl m-auto bg-[#e0fbfb] my-5;
+}
+
+.task-form label{
+    @apply text-xl text-[#66BFBF] font-bold
+}
+
+.task-form input{
+    @apply border-2 border-black w-auto h-10 rounded-md
+}
+
+.task-form-name {
+  @apply grid grid-flow-row col-span-3;
+}
+
+.task-form-date{
+    @apply grid grid-flow-row col-start-1  col-end-2
+}
+
+.task-form-note{
+    @apply grid grid-flow-row col-span-2
+}
+
+.task-form-button{
+    @apply grid grid-flow-col gap-4 col-start-3
+}

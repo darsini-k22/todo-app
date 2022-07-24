@@ -1,0 +1,10 @@
+.task {
+  @apply flex flex-col p-3 my-3 justify-evenly;
+}
+
+.task h3 {
+  @apply text-[#FF0063] font-bold text-3xl;
+}
+
+
+
