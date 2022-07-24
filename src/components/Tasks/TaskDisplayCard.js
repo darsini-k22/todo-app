@@ -12,7 +12,7 @@ export default function TaskDisplayCard(props) {
      
         {props.data?.map((task) => {
           return (
-            <TaskList key={task.id} id={task.id} taskName={task.taskName} date={task.date} note={task.note}/>
+            <TaskList taskData={task}/>
           );
         })}
    
