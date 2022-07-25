@@ -6,7 +6,7 @@ import styles from "./TaskList.module.css";
 
 export default function TaskList(props) {
   const [isDone, setIsDone] = useState(false);
-  const [filterData, setFilterData] = useState(props.taskData);
+ 
 
   const doneHandler = (e) => {
     e.preventDefault();
@@ -18,14 +18,14 @@ export default function TaskList(props) {
     setIsDone(false);
   };
 
-  // const deleteHandler = (e) => {
-  //   e.preventDefault();
-  //   const filteredData=props.taskData.filter((items)=>{return(items.id!==)})
-  //   setFilterData(filteredData);
+  const deleteHandler = (e) => {
+    e.preventDefault();
+    props.onDelete(props.taskData.id)
 
-  // };
+  };
   return (
     <Card className="bg-[#EAF6F6]">
+       {Object.keys(props.taskData).length===0 && <h1>No data</h1>}
       <li className={styles.task} key={props.taskData.id}>
         <h3
           className="font-bold text-xl"
@@ -41,7 +41,7 @@ export default function TaskList(props) {
         <span className="justify-end flex gap-3 ">
           <Button
             name="Delete"
-            value={props.taskData.id}
+            onClick={deleteHandler}
             className="bg-[#FF6363]"
           />
           <Button name="Done" onClick={doneHandler} className="bg-[#66BFBF]" />
@@ -50,8 +50,13 @@ export default function TaskList(props) {
             onClick={undoneHandler}
             className="bg-[#66BFBF]"
           />
+           {/* {!props.taskData.id && <h1>No data</h1>} */}
         </span>
+        
+      
       </li>
+
+    
     </Card>
   );
 }

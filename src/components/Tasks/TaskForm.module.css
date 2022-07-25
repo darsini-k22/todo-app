@@ -1,13 +1,13 @@
 .task-form {
-  @apply grid grid-cols-3 gap-4 border-2 border-black rounded-xl p-3 max-w-4xl m-auto bg-[#e0fbfb] my-5;
+  @apply grid grid-cols-3 gap-4  p-3 max-w-4xl m-auto bg-[#a2e3e3] my-5;
 }
 
 .task-form label{
-    @apply text-xl text-[#66BFBF] font-bold
+    @apply text-xl text-[#379696] font-bold
 }
 
 .task-form input{
-    @apply border-2 border-black w-auto h-10 rounded-md
+    @apply border-2 border-black w-auto h-10 
 }
 
 .task-form-name {

@@ -28,11 +28,20 @@ function App() {
     console.log(taskData);
   };
 
+  const deleteHandler = (taskid) => {
+    setTaskData((prevstate) => {
+      const updatedData = prevstate.filter((i) => {
+        return(i.id !== taskid);
+      });
+      return updatedData;
+    });
+  };
+
   return (
     <Fragment>
       <Header />
       <TaskForm onSubmit={submitHandler} />
-      <TaskDisplayCard data={taskData}  />
+      <TaskDisplayCard data={taskData} onDelete={deleteHandler} />
     </Fragment>
   );
 }

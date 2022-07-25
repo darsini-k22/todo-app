@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "../UI/Button";
 import styles from "./TaskForm.module.css";
 
@@ -9,12 +9,8 @@ export default function TaskForm(props) {
   const [isTaskInput, setIsTaskInput] = useState(true);
   const [isDateInput, setIsDateInput] = useState(true);
 
-  // useEffect(()=>{
-  //    console.log("You have entered!")
-  // },[taskName,date,note])
-
   const cancelHandler = (e) => {
-   e.preventDefault();
+    e.preventDefault();
     setTaskName("");
     SetDate("");
     setNote("");
@@ -29,8 +25,16 @@ export default function TaskForm(props) {
       date: date,
       note: note,
     };
-    if (taskName.trim().length === 0 || date.trim().length === 0) {
+    // if (taskName.trim().length === 0 || date.trim().length === 0) {
+    //   setIsTaskInput(false);
+    //   setIsDateInput(false);
+    //   return;
+    // }
+    if (taskName.trim().length === 0) {
       setIsTaskInput(false);
+
+      return;
+    } else if (date.trim().length === 0) {
       setIsDateInput(false);
       return;
     }
