@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
+// import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar";
 import TaskDisplayCard from "./components/Tasks/TaskDisplayCard";
 import TaskForm from "./components/Tasks/TaskForm";
 const dummyData = [
@@ -31,7 +32,7 @@ function App() {
   const deleteHandler = (taskid) => {
     setTaskData((prevstate) => {
       const updatedData = prevstate.filter((i) => {
-        return(i.id !== taskid);
+        return i.id !== taskid;
       });
       return updatedData;
     });
@@ -39,7 +40,8 @@ function App() {
 
   return (
     <Fragment>
-      <Header />
+      <Navbar />
+
       <TaskForm onSubmit={submitHandler} />
       <TaskDisplayCard data={taskData} onDelete={deleteHandler} />
     </Fragment>

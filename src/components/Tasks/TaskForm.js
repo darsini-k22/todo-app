@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import styles from "./TaskForm.module.css";
 
+
+
 export default function TaskForm(props) {
   const [taskName, setTaskName] = useState("");
   const [date, SetDate] = useState("");
@@ -30,6 +32,12 @@ export default function TaskForm(props) {
     //   setIsDateInput(false);
     //   return;
     // }
+
+    if(taskName.trim().length === 0 && date.trim().length === 0 ){
+      setIsTaskInput(false);
+      setIsDateInput(false);
+      return;
+    }
     if (taskName.trim().length === 0) {
       setIsTaskInput(false);
 
@@ -38,6 +46,8 @@ export default function TaskForm(props) {
       setIsDateInput(false);
       return;
     }
+
+    
 
     setIsTaskInput(true);
     setIsDateInput(true);

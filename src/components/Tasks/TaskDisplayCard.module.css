@@ -1,5 +1,5 @@
 .display-card {
-  @apply  p-3 max-w-4xl m-auto bg-[#66BFBF];
+  @apply  p-3 max-w-4xl top-20 relative m-auto bg-[#66BFBF];
 }
 
 .empty-card{
