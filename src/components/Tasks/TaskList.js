@@ -6,7 +6,6 @@ import styles from "./TaskList.module.css";
 
 export default function TaskList(props) {
   const [isDone, setIsDone] = useState(false);
- 
 
   const doneHandler = (e) => {
     e.preventDefault();
@@ -20,12 +19,11 @@ export default function TaskList(props) {
 
   const deleteHandler = (e) => {
     e.preventDefault();
-    props.onDelete(props.taskData.id)
-
+    props.onDelete(props.taskData.id);
   };
   return (
-    <Card className="bg-[#EAF6F6]">
-       {Object.keys(props.taskData).length===0 && <h1>No data</h1>}
+    <Card className={isDone ? "bg-[#ffb5d1]" : "bg-[#cdecec]"}>
+      {Object.keys(props.taskData).length === 0 && <h1>No data</h1>}
       <li className={styles.task} key={props.taskData.id}>
         <h3
           className="font-bold text-xl"
@@ -50,13 +48,9 @@ export default function TaskList(props) {
             onClick={undoneHandler}
             className="bg-[#66BFBF]"
           />
-           {/* {!props.taskData.id && <h1>No data</h1>} */}
+          {/* {!props.taskData.id && <h1>No data</h1>} */}
         </span>
-        
-      
       </li>
-
-    
     </Card>
   );
 }
