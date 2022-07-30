@@ -1,7 +1,5 @@
 import { Fragment, useState } from "react";
 import "./App.css";
-// import Footbar from "./components/Footbar";
-// import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar";
 import TaskDisplayCard from "./components/Tasks/TaskDisplayCard";
 import TaskForm from "./components/Tasks/TaskForm";
@@ -45,7 +43,8 @@ function App() {
 
       <TaskForm onSubmit={submitHandler} />
       <TaskDisplayCard data={taskData} onDelete={deleteHandler} />
-      
+      {/* <LoginPage/> */}
+      {/* <CalenderView/> */}
       {/* <Footbar /> */}
     </Fragment>
   );
