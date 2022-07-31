@@ -10,5 +10,5 @@
 }
 
 .button{
-    @apply pt-6
+    @apply pt-6 col-span-2
 }

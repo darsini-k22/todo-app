@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TaskDisplayCard from "./components/Tasks/TaskDisplayCard";
 import TaskForm from "./components/Tasks/TaskForm";
+import LoginPage from "./components/Login/LoginPage"
 const dummyData = [
   {
     id: 1,
@@ -39,11 +40,10 @@ function App() {
 
   return (
     <Fragment>
-      <Navbar />
-
+      {/* <Navbar />
       <TaskForm onSubmit={submitHandler} />
-      <TaskDisplayCard data={taskData} onDelete={deleteHandler} />
-      {/* <LoginPage/> */}
+      <TaskDisplayCard data={taskData} onDelete={deleteHandler} /> */}
+      <LoginPage/>
       {/* <CalenderView/> */}
       {/* <Footbar /> */}
     </Fragment>

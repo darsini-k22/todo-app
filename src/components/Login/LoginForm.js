@@ -18,7 +18,7 @@ export default function LoginForm() {
           <Button className="bg-[#3CCF4E]" name="Submit"/>
       </div>
       <div className=" col-span-2">
-          <LoginWith/>
+          <LoginWith />
       </div>
     </form>
   );
